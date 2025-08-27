@@ -3,3 +3,4 @@ start/home.html - for static websites like frontend only
 
 head - used for links to other files, url and title of the web page are handled by head section itself
 body - all other content
+default size of <p></p> = 16px
