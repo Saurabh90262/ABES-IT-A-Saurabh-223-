@@ -1,0 +1,7 @@
+.bus{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    color: aquamarine;
+}
