@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #adi{
+        border: 2px solid black;
+        height: 200px;
+        width: 200px;
+        background-color: chocolate;
+    }
+    </style>
 </head>
 <body>
+    <div id = "adi">
+        <button onclick="hello()"> Click me !</button>
+        <p id="aaa"></p>
+    </div>
     <script>
-        function abes(){
-            document.write("Hello Saurabh");
-        }
-        abes();
 
-        function add(a,b){
-            return a+b;
+        function hello(){
+            document.getElementById("aaa").innerHTML = "Hello Saurabh";
         }
-        function sub(a,b){
-            return a-b;
-        }
-        document.write("<br>"+add(5,3));
-        document.write("<br>"+sub(5,3));
+
+        //function abes(){
+        //    document.write("Hello Saurabh");
+        //}
+        //abes();
+
+        //function add(a,b){
+        //    return a+b;
+        ////}
+        //function sub(a,b){
+        //    return a-b;
+        //}
+        //document.write("<br>"+add(5,3));
+        //document.write("<br>"+sub(5,3));
     </script>
 </body>
 </html>
