@@ -11,7 +11,22 @@
         //<!-- const car = ["car1", "car2", "car3""];
         //document.getElementById("adi").innerHTML = car.join(", "); -->
         const car = new Array("car1", "car2", "car3");
+        //document.getElementById("adi").innerHTML = car[1];
+        //document.getElementById("adi").innerHTML = car[2];
         document.getElementById("adi").innerHTML = car;
+        car[2] = "car4";
+        document.getElementById("adi").innerHTML = car;
+        const person = {firstName:"Saurabh", lastName:"Maurya", age:20, eyeColor:"blue"};
+        document.getElementById("adi").innerHTML = person.firstName + " " + person.lastName;
+
+        const studends = [
+            {firstName:"Saurabh", lastName:"Maurya", age:20, eyeColor:"blue"},
+            {firstName:"Saurabh", lastName:"Kumar", age:21, eyeColor:"black"},
+            {firstName:"Saurabh", lastName:"Kumar", age:22, eyeColor:"brown"},
+            {firstName:"Aman", lastName:"Kumar", age:23, eyeColor:"white"},
+            {firstName:"Ankit", lastName:"Kumar", age:24, eyeColor:"red"}
+        ];
+        document.getElementById("adi").innerHTML = studends[3].firstName + " " + studends[3].lastName + " " + studends[3].age + " " + studends[3].eyeColor;
     </script>
 </body>
 </html>
