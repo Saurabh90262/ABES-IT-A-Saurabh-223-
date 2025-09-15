@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #outerdiv {
+      border: 2px solid greenyellow;
+      background-color: aquamarine;
+      text-align: center;
+      height: 400px;
+      width: 300px;
+      border-radius: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    #logo {
+      height: 100px;
+      width: 100px;
+      background-color: rgb(108, 108, 193);
+      border-radius: 50%;
+      margin: auto;
+    }
+    #h1 {
+      text-align: center;
+      color: white;
+      padding-top: 30px;
+    }
+    button {
+      background-color: rgb(223, 60, 42);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+    #counter {
+      font-size: 40px;
+      margin: 20px 0;
+      color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="outerdiv">
+    <div id="logo">
+      <h1 id="h1">Logo</h1>
+    </div>
+    <h1>Counter App</h1>
+    <div id="counter">0</div>
+    <button onclick="decrement()">Decrement -</button>
+    <button onclick="increase()">Increment +</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const counterElement = document.getElementById("counter");
+
+    function increase() {
+      if (count < 10) {
+        count++;
+        counterElement.textContent = count;
+      }
+    }
+
+    function decrement() {
+      if (count > 1) {
+        count--;
+        counterElement.textContent = count;
+      }
+    }
+  </script>
+
+</body>
+</html>

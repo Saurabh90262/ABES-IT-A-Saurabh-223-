@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #outerdiv{
+      border: 2px solid rgb(9, 9, 9);
+      background-color: rgb(119, 190, 186);
+      text-align: center;
+      height: 600px;
+      width: 500px;
+      border-radius: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+     }
+    #img {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    img {
+        height: 300px;
+        width: 400px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    img:hover {
+        display: none;
+    }
+    .btn{
+        background-color: rgb(223, 60, 42);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        margin: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div id="outerdiv">
+        <div id="img">
+            <img id="firstImg" src="https://tse3.mm.bing.net/th/id/OIP.U_VJuupQohwnzXcKMztqWgHaEo?w=1600&h=1000&rs=1&pid=ImgDetMain&o=7&rm=3" alt="img">
+        </div>
+        <button class="btn" onclick="hide()">Hide</button>
+    </div>
+
+    <div id="outerdiv">
+        <div id="img_1">
+            <img id="secondImg" src="https://tse3.mm.bing.net/th/id/OIP.U_VJuupQohwnzXcKMztqWgHaEo?w=1600&h=1000&rs=1&pid=ImgDetMain&o=7&rm=3" alt="img">
+        </div>
+        <button class="btn" onclick="changeImage()">Change Image</button>
+    </div>
+
+    <script>
+        function hide(){
+            document.getElementById("firstImg").style.display = "none";
+        }
+
+        function changeImage(){
+            document.getElementById("secondImg").src = "https://tse4.mm.bing.net/th/id/OIP.gabnTIrb9_VUBujEuAZp1QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3";
+        }
+    </script>
+</body>
+</html>
