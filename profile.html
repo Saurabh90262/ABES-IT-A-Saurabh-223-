@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Data Display</title>
+</head>
+<style>
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .container2{
+        margin-left: 40px;
+    }
+</style>
+<body>
+    <div class="container">
+  <h2>Input Data</h2>
+  <form id="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    <label for="text">Lang1:</label>
+    <input type="text" id="lang1" name="lang1" required><br><br>
+    <input  class="container2" type="text" id="lang2" name="lang2" required ><br><br>
+    <input class="container2" type="text" id="lang3" name="lang3" required><br><br>
+     <label for="name">Address:</label>
+    <input type="text" id="address" name="address" required><br><br>
+    <button type="submit">Submit Data</button>
+  </form>
+  <br>
+<h3>Entered Data:</h3>
+
+  <img  style="margin-left: 40px;  border-radius: 50%; width: 70px; height: 70px;  " src="https://images.pexels.com/photos/1326947/pexels-photo-1326947.jpeg?cs=srgb&dl=pexels-george-dolgikh-551816-1326947.jpg&fm=jpg" alt="Sample Image" width="300">
+  
+  <div id="result"></div>
+  <script>
+    const form = document.getElementById('userForm');
+    const resultDiv = document.getElementById('result');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+ 
+      const lamg1 = document.getElementById('lang1').value;
+      const lang2 = document.getElementById('lang2').value;
+      const lang3 = document.getElementById('lang3').value;
+      const address = document.getElementById('address').value;
+      resultDiv.innerHTML = `
+        <p><strong>Name:</strong> ${name}</p>
+       
+        <p><strong>Languages:</strong> ${lamg1}, ${lang2}, ${lang3}</p>
+        <p><strong>Address:</strong> ${address}</p>
+
+      `;
+    });
+  </script>
+</body>
+</div>
+</html>
