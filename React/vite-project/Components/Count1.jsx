@@ -11,7 +11,7 @@ function Count1() {
     setCount(count - 1);
   }
   function changeColor() {
-    const color = "red";
+    const color = "blue";
     document.body.style.backgroundColor = color;
   }
   return (
@@ -19,7 +19,7 @@ function Count1() {
       <button onClick={increment}>+</button>
       <span>{count}</span>
       <button onClick={decrement}>-</button>
-      <button onClick={changeColor}>Red</button>
+      <button onClick={changeColor}>Blue</button>
     </div>
   );
 }
