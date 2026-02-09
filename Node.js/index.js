@@ -87,7 +87,7 @@ const fs = require('fs');
 // });
 
 
-
+fs.unlinkSync("./a1.txt");
 
 
 const PORT = 3000;
