@@ -55,10 +55,41 @@ const server = http.createServer((req,res) => {
 });
 
 const fs = require('fs');
-fs.writeFile("./school.txt","One of the top Schools in Ballia Uttar Pradesh",()=>{});
-const brosture = fs.readFileSync("./school.txt","utf-8");
-console.log(brosture);
+// fs.writeFile("./school.txt","One of the top Schools in Ballia Uttar Pradesh",()=>{});
+// const brosture = fs.readFileSync("./school.txt","utf-8");
+// console.log(brosture);
+
+// fs.readFile("./school.txt","utf-8",(err,result)=>{
+//   if(err){
+//     console.log("Error:", err)
+//   }else{
+//     console.log(result)
+//   }
+// })
  
+
+// fs.appendFileSync("./school.txt",". This is our School....!")
+
+// fs.appendFile("./school.txt",". This is our School....!",(err)=>{
+//   if(err){
+//     console.log(err);
+//   }else{
+//     console.log("Success");
+//   }
+// })
+
+// fs.copyFile("./school.txt","./a1.txt",(err)=>{
+//    if(err){
+//     console.log(err);
+//    }else{
+//     console.log("Copied Successfully....!");
+//    }
+// });
+
+
+
+
+
 const PORT = 3000;
 server.listen(PORT,()=>{
     console.log(`Server is running at : http://localhost:${PORT}`);
