@@ -54,8 +54,14 @@ const server = http.createServer((req,res) => {
     }
 });
 
-
+const fs = require('fs');
+fs.writeFile("./school.txt","One of the top Schools in Ballia Uttar Pradesh",()=>{});
+const brosture = fs.readFileSync("./school.txt","utf-8");
+console.log(brosture);
+ 
 const PORT = 3000;
 server.listen(PORT,()=>{
     console.log(`Server is running at : http://localhost:${PORT}`);
 })
+
+
