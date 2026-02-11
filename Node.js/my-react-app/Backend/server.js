@@ -1,33 +1,35 @@
 import express from "express";
-import fs from "fs";
+import os from "os";
 import cors from "cors";
 
 const app = express();
+
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-const FILE = "./data.txt";
-
-// WRITE
-app.post("/write", (req, res) => {
-  fs.writeFile(FILE, req.body.message, (err) => {
-    if (err) {
-      return res.status(500).json({ message: "Write failed" });
-    }
-    res.json({ message: "Data written successfully" });
-  });
+// Routes
+app.get("/user", (req, res) => {
+  res.json({ message: JSON.stringify(os.userInfo()) });
 });
 
-// READ
-app.get("/read", (req, res) => {
-  fs.readFile(FILE, "utf8", (err, data) => {
-    if (err) {
-      return res.json({ message: "File is empty or not found" });
-    }
-    res.json({ message: data });
-  });
+app.get("/hostname", (req, res) => {
+  res.json({ message: os.hostname() });
 });
 
+app.get("/totalmem", (req, res) => {
+  res.json({ message: os.totalmem().toString() });
+});
+
+app.get("/freemem", (req, res) => {
+  res.json({ message: os.freemem().toString() });
+});
+
+app.get("/arch", (req, res) => {
+  res.json({ message: os.arch() });
+});
+
+// Start server
 app.listen(5000, () => {
-  console.log("✅ Backend running on http://localhost:5000");
+  console.log("✅ Server running on http://localhost:5000");
 });

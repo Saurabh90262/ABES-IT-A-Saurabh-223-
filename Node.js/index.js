@@ -120,17 +120,24 @@ const fs = require('fs');
 //   }
 // });
 
-try {
-  const data = fs.readFileSync('data.json', 'utf8');
-  const jsonData = JSON.parse(data);
-  console.log(jsonData);
-} catch (err) {
-  console.error('Error:', err);
-}
+// try {
+//   const data = fs.readFileSync('data.json', 'utf8');
+//   const jsonData = JSON.parse(data);
+//   console.log(jsonData);
+// } catch (err) {
+//   console.error('Error:', err);
+// }
 
+const os=require('os');
+console.log("Platform : ",os.platform());
+console.log("User info: ",os.userInfo());
+console.log("CPU: ", os.arch());
+console.log("free memory: ", os.freemem());
+console.log("Total memory: ", os.totalmem());
+console.log("Up-time: ", os.uptime());
+console.log("Home Dir: ", os.homedir());
+console.log("Host Name: ", os.hostname());
 const PORT = 3000;
 server.listen(PORT,()=>{
     console.log(`Server is running at : http://localhost:${PORT}`);
 })
-
-
