@@ -97,14 +97,36 @@ const fs = require('fs');
 //   console.log('Directory created successfully');
 // });
 
-fs.rename("./Hello.txt","File.txt",(err)=>{
-  if(err){
-    console.log("Something went wrong..!");
-    return;
-  }
-  console.log("Name Updated Successfully....!");
-})
+// fs.rename("./Hello.txt","File.txt",(err)=>{
+//   if(err){
+//     console.log("Something went wrong..!");
+//     return;
+//   }
+//   console.log("Name Updated Successfully....!");
+// })
 
+
+// fs.readFile('data.json', 'utf8', (err, data) => {
+//   if (err) {
+//     console.error('Error reading file:', err);
+//     return;
+//   }
+  
+//   try {
+//     const jsonData = JSON.parse(data);
+//     console.log(jsonData);
+//   }catch (parseErr) {
+//     console.error('Error parsing JSON:', parseErr);
+//   }
+// });
+
+try {
+  const data = fs.readFileSync('data.json', 'utf8');
+  const jsonData = JSON.parse(data);
+  console.log(jsonData);
+} catch (err) {
+  console.error('Error:', err);
+}
 
 const PORT = 3000;
 server.listen(PORT,()=>{
