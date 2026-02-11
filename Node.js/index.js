@@ -87,7 +87,23 @@ const fs = require('fs');
 // });
 
 
-fs.unlinkSync("./a1.txt");
+// fs.unlinkSync("./a1.txt");
+
+// fs.mkdir('./myFolder', (err) => {
+//   if (err) {
+//     console.error('Error creating directory:', err);
+//     return;
+//   }
+//   console.log('Directory created successfully');
+// });
+
+fs.rename("./Hello.txt","File.txt",(err)=>{
+  if(err){
+    console.log("Something went wrong..!");
+    return;
+  }
+  console.log("Name Updated Successfully....!");
+})
 
 
 const PORT = 3000;
